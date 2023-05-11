@@ -19,7 +19,7 @@ function App() {
     setGetData(true)
   }
   useEffect(() => {
-    if (buttonClicked) {
+    if (buttonClicked && form.city_name) {
       fetch(
         `http://api.openweathermap.org/geo/1.0/direct?q=${form.city_name}&limit=1&appid=8ff7cbea35e22c2b14c791d9d5daff96`,
       )
